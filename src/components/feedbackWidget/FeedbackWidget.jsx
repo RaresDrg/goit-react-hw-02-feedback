@@ -17,9 +17,9 @@ const FeedbackWidget = () => {
   };
 
   const handleFeedback = ({ target }) => {
-    target.textContent === 'Good' && setGoodFeedback(goodFeedback + 1);
-    target.textContent === 'Neutral' && setNeutralFeedback(neutralFeedback + 1);
-    target.textContent === 'Bad' && setBadFeedback(badFeedback + 1);
+    target.textContent === 'Good' && setGoodFeedback(prev => prev + 1);
+    target.textContent === 'Neutral' && setNeutralFeedback(prev => prev + 1);
+    target.textContent === 'Bad' && setBadFeedback(prev => prev + 1);
   };
 
   return (
